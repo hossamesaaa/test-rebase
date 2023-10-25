@@ -3,9 +3,15 @@ pipeline {
 
     stages {
         stage('Hello') {
-            steps {
-                echo 'Hello World'
-            }
+        //   steps {
+        //   checkout([$class: 'GitSCM',
+        //           branches: [[name: '*/main']],
+        //           userRemoteConfigs: [[url: 'git@github.com:yourusername/your-repo.git']],
+        //           extensions: [[$class: 'CloneOption', honorRefspec: true]]])
+    //   }
+
+      pwd 
+      ls -ltr
         }
     }
 }
