@@ -15,7 +15,7 @@ pipeline {
           steps {
           checkout([$class: 'GitSCM',
                   branches: [[name: '*/main']],
-                  userRemoteConfigs: [[url: 'git@github.com:yourusername/your-repo.git']],
+                  userRemoteConfigs: [[url: 'git@github.com:hossamesaaa/ITI-final-project.git']],
                   extensions: [[$class: 'CloneOption', honorRefspec: true]]])
              sh """   pwd 
                      ls -ltr  """
