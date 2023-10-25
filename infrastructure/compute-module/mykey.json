@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "hossam-eissa-project",
+  "private_key_id": "2e8c37731c93bb0e4ed70dc867e914f0ec2dceb6",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQC48t6aFyyYqEqa\nMtjEQZpg2AAXE34Cn5wXR8SSBHLhVMBVhic1n1BxYbYnD/hkOxjvF8KtktJsW2nW\nVTfujOyLVTH+0rGrB06qRym+kaauBndHZx+xf8Hoh6sMkzXYoaQ4vNKe/GU9AEml\neGr7FU7eNojH2ZIxstaf3GyptkkvY+OobsK2kRIITZYe1ZAcjAYDnEl1glBCRAKb\nF9mje99NlV2MZgRodRVvRFEPA3g20J5ZQGPfTik9r/MNPONf844tdyVazH2kePh2\nRTXO+avIkFy2QmPh2YMDYkoQfJ+Lj7Nhmrgeigqvm7fWvlGLSOGKHzjqkER0Lkpb\n0nQA3qAXAgMBAAECggEAVOd59XdKC9LGXL+W75HGU0sVz4ItSPsI508VGIteSb9k\nhF6PxXgbr9FRk+ErAKh4q9pWjuRmIURd8/0vLh4XwWcdCoSi94blQBpnOYsX37As\nNeVLkWq7FAqkJaO3Bno+L6XPcxkfSL/HD2WWhymjCTQz2rsw+AvHp5/Daq26Lzx9\nLG40/dnS1fAnKCOclLvlg2JlWfQG18ljSgiWhTOdiR7298VPspdPqrjijofPcCyy\n8jiulthDl2Jm9nsEexnYoTY+DGdzOQE+I83PNlNaA9Fmmd/h50FumgbqW686ReZE\n6dpkPTtpb6nAlebvw0teXRL/WbhAXoIwysBdW1lOoQKBgQDyGh7ey+A197/AgqT6\nXoD0ZTFdoylGCC4C2th/etyssTOwtJ/2gkUdXgnjUWyYGECnagleFosKwvFtQfjf\ny4ZjLKTJPMVEtmZnZ1X+Z7Q+kp9ItkhF4Weyzi3D56n6nw9+iFqm07OigIOgzbZY\nBq1zsGvdfKFLuqEggeAqC4iGSQKBgQDDkNYDXYVFX5Og0XL/5Z9tuch/CleJHSL1\nHqWOjvu3t+3ifnYgNhPngjSL725+B0feB4lh2uEECWNfNPseQ0hK4r5jGyxo3Y+s\nH/hC46rIPxXVS5D7jECMOdrr8DU2UKV8VvefI7vAU9NaRp94gOM6/0gSo0m1zdT8\nIiBfVdJzXwKBgCzPTNtr3MngWytkguicST3y5Nox8te1d96rZtrhgKqt+aVBKUJV\nBjnTR/08+t6DzqOt6qHxhjatskXIqimx3+PHRZDBoLmBER8ebzoxM5lJRhYNNv9I\nIwtjQfE6lal/ezyuPCkYke0H4FUI/jD4u23oP261PJ1po50CrNzbWZ+RAoGBAJLW\nEcpvEpyW+apa+OSoTT8+qgqxAi6iINg4zYevVdKImGViHGFtGR7PRZL4EFcyMkTE\nFePSSvcT8XfPuOjtDb+kZdzVz09hY/mR+36FoHo/263N0ir9EI349qYGMn34qXgl\neEEVvGfYyK1Ur3H0HCj0+fF8huCpjkxNd079ikkzAoGAcPGfk626hU3A7p3faE2I\n2NigMPwC3kMe3AJc4DrP8tmHupvbxO3G664r8JSAaMP17hokuFZY0tMGCRk8Pq79\nVlWQtR120ooUPlzh5sB09OhF6fbP8ZP0mlH75HDdVlGa5jPLO2mYvfC7VHti68co\n9JNiEqhuJbbrhGHUA3XwE1c=\n-----END PRIVATE KEY-----\n",
+  "client_email": "create-vpc-vm@hossam-eissa-project.iam.gserviceaccount.com",
+  "client_id": "110689541387507758690",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/create-vpc-vm%40hossam-eissa-project.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
