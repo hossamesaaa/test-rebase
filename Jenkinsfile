@@ -9,9 +9,10 @@ pipeline {
         //           userRemoteConfigs: [[url: 'git@github.com:yourusername/your-repo.git']],
         //           extensions: [[$class: 'CloneOption', honorRefspec: true]]])
     //   }
-
-      pwd 
-      ls -ltr
+            steps {
+             sh """   pwd 
+                     ls -ltr  """
+            }
         }
     }
 }
