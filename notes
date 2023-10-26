@@ -7,3 +7,10 @@ auth bet github and jenkins
 fix github auth issue
 ----------------------
 >https://askubuntu.com/questions/1427446/stderr-no-ecdsa-host-key-is-known-for-github-com-and-you-have-requested-strict
+
+
+checkout-stage
+--------------
+>https://stackoverflow.com/questions/55630132/jenkins-gitscm-checkout-in-specific-folder.
+
+
