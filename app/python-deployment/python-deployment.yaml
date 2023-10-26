@@ -1,34 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-deployment
+  name: python-deployment
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nodejs-app
+      app: python-app
   template:
     metadata:
       labels:
-        app: nodejs-app
+        app: python-app
     spec:
       containers:
-      - name: nodejs-app
-        image: asia-south1-docker.pkg.dev/hossam-eissa-project/docker-repository/nodejs:latest
-        env:
-            - name: DBhosts
-              value: "mongo-0.mongo:27017"
-            - name: DBuser
-              valueFrom:
-                secretKeyRef:
-                  name: mongo-creds
-                  key: username
-            - name: DBpass
-              valueFrom:
-                secretKeyRef:
-                  name: mongo-creds
-                  key: password
+      - name: python-app
+        image: asia-south2-docker.pkg.dev/hossam-eissa-project/docker-repository/python:v1
         ports:
-        - containerPort: 3000
+        - containerPort: 8181
           protocol: TCP
 
