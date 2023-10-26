@@ -5,16 +5,14 @@ pipeline {
     
     
         stage("build and push python app "){
-              steps {
-             sh """   
-                  bash app/python-app/docker_build.sh
-                   
-                     """
-            }
-
-            stage("run python app "){
             steps {
-             sh """   
+             sh "bash app/python-app/docker_build.sh  "
+            }
+        }
+
+        stage("run python app "){
+            steps {
+               sh """   
                   cd app/python-deployment
                    
                   gcloud container clusters get-credentials hossam-eissa-project-gke \
@@ -28,7 +26,7 @@ pipeline {
                      """
                }
             }
-        }
+        
 
         
     }
