@@ -31,7 +31,7 @@ pipeline {
                    
                    kubectl apply -f python-deployment.yaml
                    kubectl apply -f python-lb.yaml
-
+                   sleep 70
                    kubectl get svc 
                      '''
                }
