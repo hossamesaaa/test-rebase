@@ -26,8 +26,8 @@ pipeline {
 
                    kubectl get svc 
                      """
+               }
             }
-
         }
 
         
