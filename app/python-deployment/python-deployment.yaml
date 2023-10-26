@@ -16,6 +16,6 @@ spec:
       - name: python-app
         image: asia-south2-docker.pkg.dev/hossam-eissa-project/docker-repository/python:v1
         ports:
-        - containerPort: 8181
+        - containerPort: 8080
           protocol: TCP
 
