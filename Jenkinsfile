@@ -2,7 +2,7 @@ pipeline {
     agent any
  
     parameters {
-     choice(name: 'infra_state', choices: {"apply" , "destroy"}, description: 'The environment to apply or destroy infrastructure')
+     choice(name: 'infra_state', choices: ["apply" , "destroy"], description: 'The environment is to apply or destroy infrastructure')
     }
 
     stages {
