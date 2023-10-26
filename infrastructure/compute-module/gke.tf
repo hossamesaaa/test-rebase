@@ -39,6 +39,11 @@ resource "google_container_cluster" "project_gke_cluster" {
       display_name = "My Management Subnet"
       cidr_block   = module.network-mod.management_subnet_cidr
     }
+     cidr_blocks {
+      display_name = "My_ip"
+      cidr_block   = "Personal_Public_IP"
+    }
+
     #  gcp_public_cidrs_access_enabled = false
   }
  
