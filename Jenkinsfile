@@ -4,7 +4,7 @@ pipeline {
     agent {
 
 
-        label 'GCP_Node' || 'GCP-Node1' || 'gce-GCP_Node'
+        label 'GCP-Node1' || 'gce-GCP_Node'
     }
     stages {
     
