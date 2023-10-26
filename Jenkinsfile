@@ -13,10 +13,12 @@ pipeline {
                   cd infrastructure/compute-module
                   my_public_ip=`curl ifconfig.me`
                   sed -i 's/Personal_Public_IP/${my_public_ip}/' gke.tf
-                  
-                  terraform init
-                  terraform ${params.infra_state} -auto-approve 
-                     '''
+                '''
+              sh """ 
+                terraform init
+                terraform ${params.infra_state} -auto-approve
+                """ 
+                     
             }
 
         }
