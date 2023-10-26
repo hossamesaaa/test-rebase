@@ -24,7 +24,7 @@ resource "google_container_cluster" "project_gke_cluster" {
   deletion_protection= false 
 
   private_cluster_config {
-    enable_private_endpoint = true
+    enable_private_endpoint = false
     enable_private_nodes = true
     master_ipv4_cidr_block = "192.168.2.0/28"
 
