@@ -20,11 +20,10 @@ pipeline {
             steps {
                sh '''   
                   #!/bin/bash
-                   gcloud=/var/lib/jenkins/google-cloud-sdk/bin/gcloud
 
                   cd app/python-deployment
                    
-                  ${gcloud} container clusters get-credentials hossam-eissa-project-gke \
+                  gcloud container clusters get-credentials hossam-eissa-project-gke \
                     --region=us-east5 \
                     --project=hossam-eissa-project 
                   
