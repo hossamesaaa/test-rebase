@@ -19,6 +19,7 @@ pipeline {
         stage("run python app "){
             steps {
                sh """   
+                  #!/bin/bash
                   gcloud=/var/lib/jenkins/google-cloud-sdk/bin/gcloud
 
                   cd app/python-deployment
