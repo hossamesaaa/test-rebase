@@ -47,6 +47,6 @@ variable "gke_num_nodes" {
 variable "node_pool_locations" {
   type           = list(string)
   description    = "node_pool_locations"
-  default        = ["us-east5-a","us-east5-b","us-east5-c"]
+  default        = ["us-east5-a"]
 }
 
