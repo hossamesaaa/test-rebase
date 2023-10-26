@@ -12,7 +12,7 @@ pipeline {
              sh """   
                    cd infrastructure/compute-module
                    terraform init
-                   terraform ${params.infra_state} -auto-approve --target=google_container_cluster.project_gke_cluster
+                   terraform ${params.infra_state} -auto-approve --target=google_container_node_pool.project_gke_nodes
                      """
             }
 
