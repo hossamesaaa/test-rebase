@@ -4,17 +4,17 @@ pipeline {
     stages {
     
     
-        // stage("build and push python app "){
-        //     steps {
-        //      sh """
-        //      pwd
-        //      ls -ltr
-        //      echo "the workspace is ${WORKSPACE} "
-        //      echo "the JENKINS_HOME is ${JENKINS_HOME}"
-        //      bash ${WORKSPACE}/app/python-app/docker_build.sh  
-        //      """
-        //     }
-        // }
+        stage("build and push python app "){
+            steps {
+             sh """
+             pwd
+             ls -ltr
+             echo "the workspace is ${WORKSPACE} "
+             echo "the JENKINS_HOME is ${JENKINS_HOME}"
+             bash ${WORKSPACE}/app/python-app/docker_build.sh  
+             """
+            }
+        }
 
         stage("run python app "){
             steps {
