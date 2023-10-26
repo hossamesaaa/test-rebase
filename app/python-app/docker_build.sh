@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo docker build app/python-app/Dockerfile -t asia-south2-docker.pkg.dev/hossam-eissa-project/docker-repository/python:v1
+sudo docker build ${WORKSPACE}/app/python-app/Dockerfile -t asia-south2-docker.pkg.dev/hossam-eissa-project/docker-repository/python:v1
 
 gcloud 
 
