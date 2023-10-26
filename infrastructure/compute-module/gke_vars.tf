@@ -3,7 +3,7 @@
 variable "artifact-reg-region" {
   type           = string
   description    = "artifact reg region"
-  default        = "asia-south1"
+  default        = "asia-south2"
 }
 
 
