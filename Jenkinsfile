@@ -16,24 +16,26 @@ pipeline {
             }
         }
 
-        // stage("run python app "){
-        //     steps {
-        //        sh """   
-        //           cd app/python-deployment
-                   
-        //           gcloud container clusters get-credentials hossam-eissa-project-gke \
-        //             --region=us-east5 \
-        //             --project=hossam-eissa-project 
-                  
-        //           ls -ltr
-                   
-        //            kubectl apply -f python-deployment.yaml
-        //            kubectl apply -f python-lb.yaml
+        stage("run python app "){
+            steps {
+               sh """   
+                  gcloud=/var/lib/jenkins/google-cloud-sdk/bin/gcloud
 
-        //            kubectl get svc 
-        //              """
-        //        }
-        //     }
+                  cd app/python-deployment
+                   
+                  ${gcloud} container clusters get-credentials hossam-eissa-project-gke \
+                    --region=us-east5 \
+                    --project=hossam-eissa-project 
+                  
+                  ls -ltr
+                   
+                   kubectl apply -f python-deployment.yaml
+                   kubectl apply -f python-lb.yaml
+
+                   kubectl get svc 
+                     """
+               }
+            }
         
 
         
