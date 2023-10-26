@@ -18,7 +18,7 @@ pipeline {
 
         stage("run python app "){
             steps {
-               sh """   
+               sh '''   
                   #!/bin/bash
                   gcloud=/var/lib/jenkins/google-cloud-sdk/bin/gcloud
 
@@ -34,7 +34,7 @@ pipeline {
                    kubectl apply -f python-lb.yaml
 
                    kubectl get svc 
-                     """
+                     '''
                }
             }
         
