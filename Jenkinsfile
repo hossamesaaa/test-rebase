@@ -32,7 +32,9 @@ pipeline {
                    kubectl apply -f python-deployment.yaml
                    kubectl apply -f python-lb.yaml
                    sleep 70
-                   kubectl get svc 
+                   public_ip=`kubectl get svc |  grep "LoadBalancer"  | awk -F" " '{print $4 }'`
+                   echo "this is your public ip ${public_ip} "
+                   curl ${public_ip}
                      '''
                }
             }
