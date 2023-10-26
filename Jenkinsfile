@@ -11,7 +11,7 @@ pipeline {
              ls -ltr
              echo "the workspace is ${WORKSPACE} "
              echo "the JENKINS_HOME is ${JENKINS_HOME}"
-             bash app/python-app/docker_build.sh  
+             bash ${WORKSPACE}/app/python-app/docker_build.sh  
              """
             }
         }
