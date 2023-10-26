@@ -20,7 +20,7 @@ pipeline {
             steps {
                sh '''   
                   #!/bin/bash
-                  gcloud=/var/lib/jenkins/google-cloud-sdk/bin/gcloud
+                   gcloud=/var/lib/jenkins/google-cloud-sdk/bin/gcloud
 
                   cd app/python-deployment
                    
