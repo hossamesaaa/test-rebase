@@ -1,5 +1,7 @@
 #!/bin/bash
 
+gcloud=/var/lib/jenkins/google-cloud-sdk/bin/gcloud
+
 sudo docker build ${WORKSPACE}/app/python-app/Dockerfile -t asia-south2-docker.pkg.dev/hossam-eissa-project/docker-repository/python:v1
 
 gcloud auth activate-service-account  --key-file=${WORKSPACE}/app/python-app/mykey.json
