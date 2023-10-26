@@ -14,12 +14,14 @@ pipeline {
             }
 
         }
-        stage("test success"){
+        stage("trigger application pipeline "){
               steps {
              sh """   
                    echo "your build has been successeded"
-                   
+
                      """
+               build job: "ITI_Final_project_application_pipeline", wait: true            
+            
             }
 
         }
