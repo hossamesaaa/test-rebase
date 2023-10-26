@@ -1,7 +1,7 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
   script: |
-    docker build -t  asia-south1-docker.pkg.dev/hossam-eissa-project/docker-repository/python:v1 .
+    docker build -t  asia-south2-docker.pkg.dev/hossam-eissa-project/docker-repository/python:v1 .
   automapSubstitutions: true
 images:
-- 'asia-south1-docker.pkg.dev/hossam-eissa-project/docker-repository/python:v1'
+- 'us-west4-docker.pkg.dev/hossam-eissa-project/docker-repository/python:v1'

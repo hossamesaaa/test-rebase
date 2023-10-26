@@ -4,10 +4,10 @@ pipeline {
     stages {
     
     
-        stage("test success"){
+        stage("build python app "){
               steps {
              sh """   
-                   echo "hello from app"
+                  bash app/python-app/docker_build.sh
                    
                      """
             }
