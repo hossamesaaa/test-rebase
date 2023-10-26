@@ -1,6 +1,8 @@
 #!/bin/bash
 
-sudo docker build . -t asia-south2-docker.pkg.dev/hossam-eissa-project/docker-repository/python:v1
+sudo docker build app/python-app/Dockerfile -t asia-south2-docker.pkg.dev/hossam-eissa-project/docker-repository/python:v1
+
+gcloud 
 
 gcloud auth print-access-token \
     --impersonate-service-account sa-private-vm@hossam-eissa-project.iam.gserviceaccount.com | sudo docker login \
