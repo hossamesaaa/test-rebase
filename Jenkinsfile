@@ -9,29 +9,31 @@ pipeline {
              sh """
              pwd
              ls -ltr
+             echo "the workspace is ${WORKSPACE} "
+             echo "the JENKINS_HOME is ${JENKINS_HOME}"
              bash app/python-app/docker_build.sh  
              """
             }
         }
 
-        stage("run python app "){
-            steps {
-               sh """   
-                  cd app/python-deployment
+        // stage("run python app "){
+        //     steps {
+        //        sh """   
+        //           cd app/python-deployment
                    
-                  gcloud container clusters get-credentials hossam-eissa-project-gke \
-                    --region=us-east5 \
-                    --project=hossam-eissa-project 
+        //           gcloud container clusters get-credentials hossam-eissa-project-gke \
+        //             --region=us-east5 \
+        //             --project=hossam-eissa-project 
                   
-                  ls -ltr
+        //           ls -ltr
                    
-                   kubectl apply -f python-deployment.yaml
-                   kubectl apply -f python-lb.yaml
+        //            kubectl apply -f python-deployment.yaml
+        //            kubectl apply -f python-lb.yaml
 
-                   kubectl get svc 
-                     """
-               }
-            }
+        //            kubectl get svc 
+        //              """
+        //        }
+        //     }
         
 
         
