@@ -37,12 +37,20 @@ pipeline {
 
         }
         stage("trigger application pipeline "){
-              steps {
-             sh """   
+
+            when {
+                    expression {
+                        params.infra_state == 'apply'
+                    }
+            }
+            
+            steps {
+                
+                sh """   
                    echo "your ${params.infra_state} has been succeeded"
 
                      """
-               build job: "ITI_Final_project_application_pipeline", wait: true            
+                build job: "ITI_Final_project_application_pipeline", wait: true            
             
             }
 
