@@ -11,7 +11,7 @@ pipeline {
               steps {
              sh '''
                   my_public_ip=`curl ifconfig.me`
-                  sed -i "s/Personal_Public_IP/$my_public_ip/" infrastructure/compute-module/gke.tf
+                  sed -i "s/Personal_Public_IP/$my_public_ip\/32/"  infrastructure/compute-module/gke.tf
                 '''
               sh """ 
                 cd infrastructure/compute-module
