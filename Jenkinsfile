@@ -1,22 +1,40 @@
 pipeline {
     agent any
 
+     parameters {
+     booleanParam(name: 'build_&_push', defaultValue: false, description: 'build and push python app')
+     booleanParam(name: 'deploy_app', defaultValue: false, description: 'run python app')
+    }
+    
     stages {
     
     
         stage("build and push python app "){
+
+            when {
+                    expression {
+                        params.build_&_push == true
+                    }
+            }
+
             steps {
              sh """
              pwd
              ls -ltr
-             echo "the workspace is ${WORKSPACE} "
-             echo "the JENKINS_HOME is ${JENKINS_HOME}"
+            //  echo "the workspace is ${WORKSPACE} "
+            //  echo "the JENKINS_HOME is ${JENKINS_HOME}"
              bash ${WORKSPACE}/app/python-app/docker_build.sh  
              """
             }
         }
 
         stage("run python app "){
+            when {
+                    expression {
+                        params.deploy_app == true
+                    }
+            }
+            
             steps {
                sh '''   
                   #!/bin/bash
