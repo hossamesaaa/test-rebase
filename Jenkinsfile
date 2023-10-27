@@ -2,8 +2,8 @@ pipeline {
     agent any
 
      parameters {
-     booleanParam(name: 'build_push', defaultValue: true, description: 'build and push python app')
-     booleanParam(name: 'deploy_app', defaultValue: true, description: 'run python app')
+     booleanParam(name: 'build', defaultValue: true, description: 'build and push python app')
+     booleanParam(name: 'deploy', defaultValue: true, description: 'run python app')
     }
     
     stages {
@@ -13,16 +13,13 @@ pipeline {
 
                 when {
                         expression {
-                            params.build_push == true
+                            params.build == true
                         }
                 }
 
                 steps {
                 sh """
-                pwd
                 ls -ltr
-                //  echo "the workspace is ${WORKSPACE} "
-                //  echo "the JENKINS_HOME is ${JENKINS_HOME}"
                 bash ${WORKSPACE}/app/python-app/docker_build.sh  
                 """
                 }
@@ -31,7 +28,7 @@ pipeline {
         stage("run python app "){
                 when {
                         expression {
-                            params.deploy_app == true
+                            params.deploy == true
                         }
                 }
 
