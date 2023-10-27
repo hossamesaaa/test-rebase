@@ -10,7 +10,11 @@ pipeline {
         stage("get public_ip & authorized_net "){
               steps {
              
-              sh   " my_public_ip=`curl ifconfig.me` && sed -i "s/Personal_Public_IP/$my_public_ip\/32/"  infrastructure/compute-module/gke.tf "
+              sh   '''
+               my_public_ip=$(curl ifconfig.me)  
+               sed -i "s/Personal_Public_IP/$my_public_ip\/32/"  infrastructure/compute-module/gke.tf 
+               '''
+               
               sh """ 
                 cd infrastructure/compute-module
                 terraform init
