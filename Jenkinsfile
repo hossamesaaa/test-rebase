@@ -2,8 +2,8 @@ pipeline {
     agent any
 
      parameters {
-     booleanParam(name: 'build_&_push', defaultValue: false, description: 'build and push python app')
-     booleanParam(name: 'deploy_app', defaultValue: false, description: 'run python app')
+     booleanParam(name: 'build_&_push', defaultValue: true, description: 'build and push python app')
+     booleanParam(name: 'deploy_app', defaultValue: true, description: 'run python app')
     }
     
     stages {
