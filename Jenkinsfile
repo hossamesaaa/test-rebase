@@ -2,7 +2,7 @@ pipeline {
     agent any
 
      parameters {
-     booleanParam(name: 'build_&_push', defaultValue: true, description: 'build and push python app')
+     booleanParam(name: 'build&push', defaultValue: true, description: 'build and push python app')
      booleanParam(name: 'deploy_app', defaultValue: true, description: 'run python app')
     }
     
@@ -13,7 +13,7 @@ pipeline {
 
                 when {
                         expression {
-                            params.build_&_push == true
+                            params.build&push == true
                         }
                 }
 
