@@ -9,7 +9,7 @@ pipeline {
     stages {
     
     
-        stage("build and push python app "){
+        stage("build and push python app image "){
 
                 when {
                         expression {
@@ -46,7 +46,7 @@ pipeline {
                     
                     kubectl apply -f python-deployment.yaml
                     kubectl apply -f python-lb.yaml
-                    sleep 50
+                    sleep 40
                     public_ip=`kubectl get svc |  grep "LoadBalancer"  | awk -F" " '{print $4 }'`
                     echo "this is loadbalancer public ip ${public_ip} "
                     curl ${public_ip}
