@@ -7,13 +7,30 @@ pipeline {
 
     stages {
 
-        stage("get public_ip & authorized_net "){
+        stage("get public_ip & add authorized_net "){
               steps {
              
-              sh   '''
-               my_public_ip=$(curl ifconfig.me)  
-               sed -i "s/Personal_Public_IP/$my_public_ip\\\\/32/"  infrastructure/compute-module/gke.tf 
-               '''
+            //   sh   '''
+            //    my_public_ip=$(curl ifconfig.me)   
+            //    sed -i "s/Personal_Public_IP/$my_public_ip\\\\/32/"  infrastructure/compute-module/gke.tf 
+            //    '''
+
+               script {
+                  def new_IP = sh(script: 'curl -s ifconfig.me', returnStdout: true).trim()
+                  new_IP=new_IP+"/32"
+                   print new_IP
+                  
+                  def newFile = new File("${WORKSPACE}/infrastructure/compute-module/gke.tf")
+
+                   readMyFile=newFile.text
+                   AfterReplace=readMyFile.replaceAll(/[0-9]+.[0-9]+.[0-9]+.[0-9]+\/32/,"${new_IP}")
+                    
+                    newFile.write (AfterReplace)
+                
+                   print newFile.text
+                //   print test_pattern 
+                
+                }
 
             }
 
