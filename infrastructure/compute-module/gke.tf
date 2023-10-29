@@ -41,7 +41,7 @@ resource "google_container_cluster" "project_gke_cluster" {
     }
      cidr_blocks {
       display_name = "My_ip"
-      cidr_block   = "196.157.99.95/32"
+      cidr_block   = "0.0.0.0/32"
     }
 
     #  gcp_public_cidrs_access_enabled = false
